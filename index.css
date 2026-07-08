@@ -1673,12 +1673,10 @@ footer {
 }
 
 .note {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 29;
-  justify-self: center;
-  position: relative;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 30;
   pointer-events: none;
   color: var(--text-gray);
@@ -1690,18 +1688,20 @@ footer {
   box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .-w {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding: 32px 16px;
+    gap: 32px;
+    padding: 48px 24px;
     min-height: auto;
   }
   .-w figure {
     grid-row-start: auto;
     grid-row-end: auto;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     transform: none !important;
     scale: 1 !important;
     translate: 0 0 !important;
@@ -1710,10 +1710,13 @@ footer {
   .image-1, .image-2, .image-3 {
     grid-column-start: auto;
     grid-column-end: auto;
+    translate: 0 0 !important;
+    rotate: 0deg !important;
   }
   .note {
     display: none;
   }
 }
+
 
 
