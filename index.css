@@ -1690,3 +1690,30 @@ footer {
   box-shadow: var(--shadow-sm);
 }
 
+@media (max-width: 768px) {
+  .-w {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 16px;
+    min-height: auto;
+  }
+  .-w figure {
+    grid-row-start: auto;
+    grid-row-end: auto;
+    width: 100%;
+    transform: none !important;
+    scale: 1 !important;
+    translate: 0 0 !important;
+    rotate: 0deg !important;
+  }
+  .image-1, .image-2, .image-3 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  .note {
+    display: none;
+  }
+}
+
+
